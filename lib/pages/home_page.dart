@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import '../components/card_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -112,18 +112,9 @@ class _HomePageState extends State<HomePage> {
               },
               child: Transform.translate(
                 offset: Offset(_xOffset, 0.0),
-                child: Transform.rotate(
+                child: const CardWidget(
                   angle: 1.3,
-                  child: Center(
-                    child: Container(
-                      width: double.infinity,
-                      height: 300,
-                      decoration: BoxDecoration(
-                        color: Colors.pink,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                  ),
+                  color: Colors.pink,
                 ),
               ),
             ),
